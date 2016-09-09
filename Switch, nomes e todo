@@ -1,0 +1,84 @@
+Exemplo de switch:
+
+ switch (nOpc) {
+       case 1:
+         lamp[0].acende();
+         break;
+       case 2:
+         lamp[0].apaga();
+       break;
+       case 3:
+         lamp[0].mostraResultado();
+       break;
+       default:
+         System.out.printf("\n --> Valor Incorreto");
+         //esperando 2 segundos (delay)
+         try { Thread.sleep (2000); }
+         catch (InterruptedException ex) {}
+       break;    	
+     }
+
+
+switch( operacao )
+        {
+            case '+':
+                System.out.printf("%.2f + %.2f = %.2f", numero1, numero2, numero1 + numero2);
+                break;        
+                
+            case '-':
+                System.out.printf("%.2f - %.2f = %.2f", numero1, numero2, numero1 - numero2);
+                break;
+                
+            case '*':
+                System.out.printf("%.2f * %.2f = %.2f", numero1, numero2, numero1 * numero2);
+                break;
+                
+            case '/':
+                System.out.printf("%.2f / %.2f = %.2f", numero1, numero2, numero1 / numero2);
+                break;
+            
+            default:
+                System.out.printf("Você digitou uma operação inválida.");        
+            
+        }
+
+Exemplo de função fazendo uma só coisa:
+
+public class FatorialComFuncao {
+public static void fatorar(int numero) {
+int fator = 1;
+for (int i = numero; i > 1; i--) {
+fator *= i;
+}
+System.out.println(numero + "! = " + fator);
+}
+
+public static void main(String args[]) {
+for (int x=1; x<=10; x++)
+fatorar (x);
+}
+}
+
+public void mostraResultado(){
+    //Se o estado da lampada for Verdadeiro
+    if(this.estadoDaLampada){
+      System.out.printf("\n\nA lampada esta acessa!\n\n");
+    }
+    else{
+      System.out.printf("\n\nA lampada esta apagada!\n\n");
+    }
+  }
+
+Exemplos de nomes:
+
+public static void mostrarMensagem() {
+System.out.println("Minha Mensagem");
+}
+
+public void acende(){
+    this.estadoDaLampada=true;
+}
+
+public String getMat()
+
+public void mudaCanal(int nTipo)
