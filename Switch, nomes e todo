@@ -1,4 +1,4 @@
-Exemplo de switch:
+* Exemplo de switch:
 
  switch (nOpc) {
        case 1:
@@ -42,7 +42,7 @@ switch( operacao )
             
         }
 
-Exemplo de função fazendo uma só coisa:
+* Exemplo de função fazendo uma só coisa:
 
 public void seila(){
 System.out.printf("Os estados possíveis são: %s(%d) %s(%d), %s(%d), %s(%d)\n\n",
@@ -81,7 +81,7 @@ public void mostraResultado(){
     }
   }
 
-Exemplos de nomes:
+* Exemplos de nomes:
 
 public static void mostrarMensagem() {
 System.out.println("Minha Mensagem");
@@ -94,3 +94,40 @@ public void acende(){
 public String getMat()
 
 public void mudaCanal(int nTipo)
+
+* Exemplo de retorno nulo com uma função grande (mais de 4 linhas):
+
+public static String formataData(String data) throws Exception {
+    if (data == null || data.equals(""))
+        return null;
+    Date date = null;
+    DateFormat formatter; 
+    try {
+        formatter = new SimpleDateFormat("HH:mm:ss");
+        date = (java.util.Date) formatter.parse(data);
+    } catch (ParseException e) {
+        throw e;
+    }
+    return formatter.format(date);
+}
+
+* Mesmo método com poucas linhas mas retornando null:
+
+public static LocalTime formataData(String data) throws Exception {
+    if (data == null || data.equals(""))
+        return null;
+    LocalTime lt = LocalTime.parse(data);
+    return lt;
+}
+
+* Mesmo método com poucas linhas e retornando conjuntos vazios (ideal):
+
+public static LocalTime formataData(String data) throws Exception {
+    LocalTime it = null;
+    if(data == null){
+	it = LocalTime.parse(data.equals(“”);
+    }else{
+	it = LocalTime.parse(data);
+    }
+    return it;
+}
