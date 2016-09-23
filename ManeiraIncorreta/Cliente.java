@@ -3,7 +3,7 @@ package BadPracticesExample;
 import java.util.List;
 
 /**
- * Created by dyegoOliveira on 22/09/2016.
+ * Created by dyegospeciais on 22/09/2016.
  */
 public class Client {
     public static void main(String[] args){
