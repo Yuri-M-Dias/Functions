@@ -1,4 +1,4 @@
-public void seila(){
+public void escreve(){
 System.out.printf("Os estados possíveis são: %s(%d) %s(%d), %s(%d), %s(%d)\n\n",
        MENSAGENS[SEM_LEITURA], SEM_LEITURA, MENSAGENS[DESLIGADO], DESLIGADO,
     MENSAGENS[LIGADO], LIGADO, MENSAGENS[ALARME], ALARME);
